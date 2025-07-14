@@ -34,7 +34,7 @@ const Cart = () => {
 
     const finalMessage = `🛒 *Order Summary*\n\n${message}\n\n🧾 *Total*: ${displayTotalAmount}`;
     const encodedMessage = encodeURIComponent(finalMessage);
-    const whatsappLink = `https://wa.me/917558847558?text=${encodedMessage}`;
+    const whatsappLink = `https://wa.me/919446180100?text=${encodedMessage}`;
 
     window.open(whatsappLink, '_blank');
   };
