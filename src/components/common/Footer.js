@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { footMenu, footSocial } from '../../data/footerData';
+import Logo from '../../assets/Logo.png'
 
 
 const Footer = () => {
@@ -23,7 +24,7 @@ const Footer = () => {
                     <div className="foot_about">
                         <h2>
                             <Link to="/">
-                                <img src="/images/logo.png" alt="Logo" />
+                                <img src={Logo} alt="Logo" />
                             </Link>
                         </h2>
                         <div className="foot_subs">
