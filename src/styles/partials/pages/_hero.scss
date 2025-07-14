@@ -35,15 +35,15 @@
     }
 
     &.hero_slide-0::before {
-        content: "Over Ear";
+        content: "Power saff";
     }
 
     &.hero_slide-1::before {
-        content: "In Ear";
+        content: "Power saff";
     }
 
     &.hero_slide-2::before {
-        content: "Over Ear";
+        content: "Power saff";
     }
 
     @include devices(lg) {
@@ -104,18 +104,23 @@
 }
 
 .hero_item_img {
-    overflow: hidden;
+  overflow: hidden;
+
+  img {
+    @include img-fit;
+    height: 400px; // Default for large screens
+  }
+
+  @include devices(lg) {
+    grid-row: 1;
+  }
+
+  @include devices(sm) {
+    max-width: 18rem;
+    width: 75%;
 
     img {
-        @include img-fit;
+      height:fit-content; // ✅ Override for small screens
     }
-
-    @include devices(lg) {
-        grid-row: 1;
-    }
-
-    @include devices(sm) {
-        max-width: 18rem;
-        width: 75%;
-    }
+  }
 }

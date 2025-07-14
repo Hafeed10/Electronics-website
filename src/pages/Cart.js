@@ -6,10 +6,12 @@ import cartContext from '../contexts/cart/cartContext';
 import CartItem from '../components/cart/CartItem';
 import EmptyView from '../components/common/EmptyView';
 
-
 const Cart = () => {
   useDocTitle('Cart');
   const { cartItems } = useContext(cartContext);
+
+  // Debug: Log cart items
+  console.log('cartItems:', cartItems);
 
   const cartQuantity = cartItems.length;
 
@@ -25,81 +27,75 @@ const Cart = () => {
   const displayTotalAmount = displayMoney(totalAmount);
 
   // ✅ Handle WhatsApp checkout
- const handleWhatsAppCheckout = () => {
-  const message = cartItems.map((item, index) => {
-    return `${index + 1}. *${item.name}*\n🖼 ${item.imageUrl}\nQty: ${item.quantity} x ₹${item.finalPrice} = ₹${item.finalPrice * item.quantity}\n`;
-  }).join('\n');
+  const handleWhatsAppCheckout = () => {
+    const message = cartItems.map(item =>
+      `• ${item.name || item.title} x${item.quantity} - ${displayMoney(item.finalPrice * item.quantity)}`
+    ).join('\n');
 
-  const finalMessage = `🛒 *Order Summary*\n\n${message}\n🧾 *Total*: ${displayTotalAmount}`;
-  const encodedMessage = encodeURIComponent(finalMessage);
-  const whatsappLink = `https://wa.me/917558847558?text=${encodedMessage}`; // Replace with your number
+    const finalMessage = `🛒 *Order Summary*\n\n${message}\n\n🧾 *Total*: ${displayTotalAmount}`;
+    const encodedMessage = encodeURIComponent(finalMessage);
+    const whatsappLink = `https://wa.me/917558847558?text=${encodedMessage}`;
 
-  window.open(whatsappLink, '_blank');
-};
-
+    window.open(whatsappLink, '_blank');
+  };
 
   return (
-    <>
-      <section id="cart" className="section">
-        <div className="container">
-          {
-            cartQuantity === 0 ? (
-              <EmptyView
-                icon={<BsCartX />}
-                msg="Your Cart is Empty"
-                link="/all-products"
-                btnText="Start Shopping"
-              />
-            ) : (
-              <div className="wrapper cart_wrapper">
-                <div className="cart_left_col">
-                  {cartItems.map(item => (
-                    <CartItem key={item.id} {...item} />
-                  ))}
-                </div>
+    <section id="cart" className="section">
+      <div className="container">
+        {cartQuantity === 0 ? (
+          <EmptyView
+            icon={<BsCartX />}
+            msg="Your Cart is Empty"
+            link="/all-products"
+            btnText="Start Shopping"
+          />
+        ) : (
+          <div className="wrapper cart_wrapper">
+            <div className="cart_left_col">
+              {cartItems.map(item => (
+                <CartItem key={item.id} {...item} />
+              ))}
+            </div>
 
-                <div className="cart_right_col">
-                  <div className="order_summary">
-                    <h3>
-                      Order Summary &nbsp;
-                      ( {cartQuantity} {cartQuantity > 1 ? 'items' : 'item'} )
-                    </h3>
-                    <div className="order_summary_details">
-                      <div className="price">
-                        <span>Original Price</span>
-                        <b>{displayCartTotal}</b>
-                      </div>
-                      <div className="discount">
-                        <span>Discount</span>
-                        <b>- {displayCartDiscount}</b>
-                      </div>
-                      <div className="delivery">
-                        <span>Delivery</span>
-                        <b>Free</b>
-                      </div>
-                      <div className="separator"></div>
-                      <div className="total_price">
-                        <b><small>Total Price</small></b>
-                        <b>{displayTotalAmount}</b>
-                      </div>
-                    </div>
-
-                    {/* ✅ Checkout with WhatsApp */}
-                    <button
-                      type="button"
-                      className="btn checkout_btn"
-                      onClick={handleWhatsAppCheckout}
-                    >
-                      Checkout via WhatsApp
-                    </button>
+            <div className="cart_right_col">
+              <div className="order_summary">
+                <h3>
+                  Order Summary &nbsp;
+                  ({cartQuantity} {cartQuantity > 1 ? 'items' : 'item'})
+                </h3>
+                <div className="order_summary_details">
+                  <div className="price">
+                    <span>Original Price</span>
+                    <b>{displayCartTotal}</b>
+                  </div>
+                  <div className="discount">
+                    <span>Discount</span>
+                    <b>- {displayCartDiscount}</b>
+                  </div>
+                  <div className="delivery">
+                    <span>Delivery</span>
+                    <b>Free</b>
+                  </div>
+                  <div className="separator"></div>
+                  <div className="total_price">
+                    <b><small>Total Price</small></b>
+                    <b>{displayTotalAmount}</b>
                   </div>
                 </div>
+
+                <button
+                  type="button"
+                  className="btn checkout_btn"
+                  onClick={handleWhatsAppCheckout}
+                >
+                  Checkout via WhatsApp
+                </button>
               </div>
-            )
-          }
-        </div>
-      </section>
-    </>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 

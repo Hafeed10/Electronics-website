@@ -40,20 +40,26 @@
 }
 
 .products_img {
-    background: var(--bg-color-2);
-    text-align: center;
-    padding: 1rem;
-    overflow: hidden;
+  background: var(--bg-color-2);
+  text-align: center;
+  height: 250px; 
+  padding: 1rem;
+  overflow: hidden;
 
-    img {
-        width: 70%;
-        @include transition(transform, 0.25s, ease);
+  img {
+    width: 70%;
+    @include transition(transform, 0.25s, ease);
 
-        &:hover {
-            transform: scale(1.05);
-        }
+    &:hover {
+      transform: scale(1.05);
     }
+  }
+
+  @include devices(sm) {
+    height: 190px; 
+  }
 }
+
 
 .products_details {
     padding: 1rem;
@@ -61,6 +67,7 @@
 
 .products_title {
     @include margin-y(0.8rem, 0.4rem);
+    font-size: 18px;
 }
 
 .products_info {
@@ -73,7 +80,7 @@
     margin-top: 1.2rem;
 
     &.active {
-        background-color: green;
+        background-color: rgb(157, 5, 5);
     }
 
     &[disabled] {
@@ -103,6 +110,6 @@
 
         @include devices(xs) {
             grid-template-columns: 1fr;
-        }
+        } 
     }
 }
