@@ -269,7 +269,7 @@ const productsData = [
   },
   {
     id: 19,
-    images: ["/images/products/sonyxb400-1.png"],
+    images: ["/images/products/boat228-1.png"],
     brand: "Headphones",
     title: "Sony WI-XB400",
     info: "Wireless Extra Bass In-Ear Neckbands",
