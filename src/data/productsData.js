@@ -3,10 +3,10 @@ import Image2 from "../assets/images/products/ChatGPT Image Jul 17, 2025, 05_27_
 import Image3 from "../assets/images/products/ChatGPT_Image_Jul_17__2025__06_00_25_PM-removebg-preview.png";
 import Image4 from "../assets/images/image1.webp";
 import Image5 from "../assets/images/movse-CrXJrG4q.avif";
-import Image6 from "../assets/images/prodcut10-removebg-preview-SKes7c6y.png";
+import Image6 from "../assets/images/products/POWER_SAFF_Tubular_Battery_Statement-removebg-preview1.png";
 import Image7 from "../assets/images/prodcut11-removebg-preview-CEEl3h0m.png";
 import Image8 from "../assets/images/prodcut6-removebg-preview-CAMixpcs.png";
-import Image9 from "../assets/images/prodcut8-removebg-preview-SYeQ0Sh-.png";
+import Image9 from "../assets/images/products/POWER_SAFF_Tubular_Deep-Cycle_Battery-removebg-preview.png";
 import Image10 from "../assets/images/product1-removebg-preview-B9JUCw62.png";
 import Image11 from "../assets/images/product2-removebg-preview-CwORi1op.png";
 import Image12 from "../assets/images/product3-removebg-preview-B2pkgGdd.png";

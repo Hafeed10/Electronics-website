@@ -7,6 +7,7 @@ import BackTop from './components/common/BackTop';
 import { FiltersProvider } from './contexts/filters/filtersContext';
 import { Analytics } from "@vercel/analytics/react";
 
+
 const App = () => {
   return (
     <>
