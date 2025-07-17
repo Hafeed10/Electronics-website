@@ -28,7 +28,6 @@ const Home = () => {
 
       <section id="products" className="section">
         <div className="container">
-          {/* <Items /> */}
           <SectionsHead heading="Top Products" />
           <TopProducts />
         </div>
