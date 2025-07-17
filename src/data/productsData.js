@@ -1,10 +1,38 @@
+import Image1 from "../assets/images/products/jbl660nc-1.png";
+import Image2 from "../assets/images/inverter-1-3-removebg-preview[1] (1).png";
+import Image3 from "../assets/images/banar-3---removebg-preview[1] 1.png";
+import Image4 from "../assets/images/image1.webp";
+import Image5 from "../assets/images/movse-CrXJrG4q.avif";
+import Image6 from "../assets/images/prodcut10-removebg-preview-SKes7c6y.png";
+import Image7 from "../assets/images/prodcut11-removebg-preview-CEEl3h0m.png";
+import Image8 from "../assets/images/prodcut6-removebg-preview-CAMixpcs.png";
+import Image9 from "../assets/images/prodcut8-removebg-preview-SYeQ0Sh-.png";
+import Image10 from "../assets/images/product1-removebg-preview-B9JUCw62.png";
+import Image11 from "../assets/images/product2-removebg-preview-CwORi1op.png";
+import Image12 from "../assets/images/product3-removebg-preview-B2pkgGdd.png";
+import Image13 from "../assets/images/products/jbl-endu-1.png";
+import Image14 from "../assets/images/watch1-CzUhC8my.avif";
+import Image15 from "../assets/images/products/boat410-2.png";
+import Image16 from "../assets/images/products/jbl500bt-1.png";
+import Image17 from "../assets/images/products/boat381-1.png";
+import Image18 from "../assets/images/products/sony-ex14ap-1.png";
+import Image19 from "../assets/images/products/boat228-1.png";
+import Image20 from "../assets/images/product4-removebg-preview-BiEgiAnL.png";
+import Image21 from "../assets/images/product5-removebg-preview-N1_TA0So.png";
+import Image22 from "../assets/images/product6-removebg-preview-DAC2mlE5.png";
+import Image23 from "../assets/images/st1_azyp-v8-removebg-preview.png-DArmXBga.avif";
+import Image24 from "../assets/images/batterycharger-ZTbtfiB9.png";
+import Image25 from "../assets/images/wired-keyboard-BAyjGj3P.webp";
+import Image26 from "../assets/images/image 38.png";
+import Image27 from "../assets/stereo-BbWcF3hI.webp";
+
 const productsData = [
   {
     id: 1,
     tag: "hero-product",
     tagline: "Keep the noise out, or in. You choose.",
-    heroImage: "/images/products/jbl660nc-1.png",
-    images: ["/images/products/jbl660nc-1.png"],
+    heroImage: Image1,
+    images: [Image1],
     brand: "JBL",
     title: "JBL Live 2660NC",
     info: "Wireless Over-Ear NC Headphones",
@@ -20,8 +48,8 @@ const productsData = [
     id: 3,
     tag: "hero-product",
     tagline: "Featherweight for comfort all-day.",
-    heroImage: "/images/inverter-1-3-removebg-preview[1] (1).png",
-    images: ["/images/inverter-1-3-removebg-preview[1] (1).png"],
+    heroImage: Image2,
+    images: [Image2],
     brand: "Inverter",
     title: "Inverter",
     info: " Electronics",
@@ -36,8 +64,8 @@ const productsData = [
     id: 7,
     tag: "hero-product",
     tagline: "Powersaff Power Battery.",
-    heroImage: "/images/banar-3---removebg-preview[1] 1.png",
-    images: ["/images/banar-3---removebg-preview[1] 1.png"],
+    heroImage: Image3,
+    images: [Image3],
     brand: "Battery",
     title: "Battery",
     info: "Powersaff",
@@ -53,7 +81,7 @@ const productsData = [
   {
     id: 2,
     tag: "featured-product",
-    images: ["/images/image1.webp"],
+    images: [Image4],
     brand: "Gamepad ",
     title: "GP11 Gamepad",
     info: "Gamepad",
@@ -69,7 +97,7 @@ const productsData = [
   {
     id: 4,
     tag: "featured-product",
-    images: ["/images/movse-CrXJrG4q.avif"],
+    images: [Image5],
     brand: "Mouse",
     title: "Acer Wireless Mouse",
     info: "Mouse",
@@ -83,7 +111,7 @@ const productsData = [
   },
   {
     id: 5,
-    images: ["/images/prodcut10-removebg-preview-SKes7c6y.png"],
+    images: [Image6],
     brand: "Battery",
     title: "AX_ON",
     info: "Battery",
@@ -97,7 +125,7 @@ const productsData = [
   },
   {
     id: 6,
-    images: ["/images/prodcut11-removebg-preview-CEEl3h0m.png"],
+    images: [Image7],
     brand: "Inverter",
     title: "Red Inverter",
     info: "Red Inverter",
@@ -111,7 +139,7 @@ const productsData = [
   },
   {
     id: 8,
-    images: ["/images/prodcut6-removebg-preview-CAMixpcs.png"],
+    images: [Image8],
     brand: "Inverter",
     title: "Sayok Inverter",
     info: "Sayok Inverter",
@@ -125,7 +153,7 @@ const productsData = [
   },
   {
     id: 9,
-    images: ["/images/prodcut8-removebg-preview-SYeQ0Sh-.png"],
+    images: [Image9],
     brand: "Battery",
     title: "Sayok Tubular",
     info: "Sayok Tubular",
@@ -140,7 +168,7 @@ const productsData = [
   {
     id: 10,
     tag: "featured-product",
-    images: ["/images/product1-removebg-preview-B9JUCw62.png"],
+    images: [Image10],
     brand: "Electronics",
     title: "Zero Drop Solar Charge",
     info: "Zero Drop Solar Charge Controller",
@@ -154,7 +182,7 @@ const productsData = [
   },
   {
     id: 11,
-    images: ["/images/product2-removebg-preview-CwORi1op.png"],
+    images: [Image11],
     brand: "Inverter",
     title: "Powersaff Inverter",
     info: "Powersaff Inverter",
@@ -169,7 +197,7 @@ const productsData = [
   {
     id: 12,
     tag: "featured-product",
-    images: ["/images/product3-removebg-preview-B2pkgGdd.png"],
+    images: [Image12],
     brand: "Electronics",
     title: "Sayok MPPT",
     info: "Sayok MPPT",
@@ -184,7 +212,7 @@ const productsData = [
   {
     id: 13,
     tag: "featured-product",
-    images: ["/images/products/jbl-endu-1.png"],
+    images: [Image13],
     brand: "JBL",
     title: "JBL Endurance Run Sports",
     info: "In-Ear Wired Earphones",
@@ -199,7 +227,7 @@ const productsData = [
   {
     id: 14,
     tag: "featured-product",
-    images: ["/images/watch1-CzUhC8my.avif"],
+    images: [Image14],
     brand: "Smart Watch",
     title: "Astra 3 Smart Watch",
     info: "Smart Watch",
@@ -213,7 +241,7 @@ const productsData = [
   },
   {
     id: 1222,
-    images: ["/images/products/boat410-2.png"],
+    images: [Image15],
     brand: "Headphones",
     title: "boAt ",
     info: "In-Ear Wireless Earbuds",
@@ -227,7 +255,7 @@ const productsData = [
   },
   {
     id: 16,
-    images: ["/images/products/jbl500bt-1.png"],
+    images: [Image16],
     brand: "JBL",
     title: "JBL Tune 500BT",
     info: "On-Ear Wireless Headphones",
@@ -241,7 +269,7 @@ const productsData = [
   },
   {
     id: 17,
-    images: ["/images/products/boat381-1.png"],
+    images: [Image17],
     brand: "Headphones",
     title: "boAt Airdopes 381",
     info: "In-Ear Wireless Earbuds",
@@ -255,7 +283,7 @@ const productsData = [
   },
   {
     id: 18,
-    images: ["/images/products/sony-ex14ap-1.png"],
+    images: [Image18],
     brand: "Headphones",
     title: "Sony MDR-EX14AP",
     info: "In-Ear Wired Earphones",
@@ -269,7 +297,7 @@ const productsData = [
   },
   {
     id: 19,
-    images: ["/images/products/boat228-1.png"],
+    images: [Image19],
     brand: "Headphones",
     title: "Sony WI-XB400",
     info: "Wireless Extra Bass In-Ear Neckbands",
@@ -283,7 +311,7 @@ const productsData = [
   },
   {
     id: 20,
-    images: ["/images/product4-removebg-preview-BiEgiAnL.png"],
+    images: [Image20],
     brand: "Electronics",
     title: "Solar Charge Controller",
     info: "Solar Charge Controller",
@@ -297,7 +325,7 @@ const productsData = [
   },
   {
     id: 21,
-    images: ["/images/product5-removebg-preview-N1_TA0So.png"],
+    images: [Image21],
     brand: "Inverter",
     title: "Sayok CPU",
     info: "Sayok CPU",
@@ -311,7 +339,7 @@ const productsData = [
   },
   {
     id: 22,
-    images: ["/images/product6-removebg-preview-DAC2mlE5.png"],
+    images: [Image22],
     brand: "Inverter",
     title: "CPU Model Inverter",
     info: "CPU Model Inverter",
@@ -326,7 +354,7 @@ const productsData = [
   {
     id: 23,
     tag: "featured-product",
-    images: ["/images/st1_azyp-v8-removebg-preview.png-DArmXBga.avif"],
+    images: [Image23],
     brand: "Electronics",
     title: "IMPEX Kettle",
     info: "IMPEX Kettle",
@@ -341,7 +369,7 @@ const productsData = [
   {
     id: 24,
     tag: "featured-product",
-    images: ["/images/batterycharger-ZTbtfiB9.png"],
+    images: [Image24],
     brand: "Electronics",
     title: "Battery charger ",
     info: "Battery charger ",
@@ -350,6 +378,49 @@ const productsData = [
     connectivity: "Electronics",
     finalPrice: 2500,
     originalPrice: 3000,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 25,
+    images: [Image25],
+    brand: "Electronics",
+    title: "Wired Keyboard",
+    info: "Keyboard",
+    category: "Electronics",
+    type: "Electronics",
+    connectivity: "Electronics",
+    finalPrice: 2500,
+    originalPrice: 3000,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 26,
+    images: [Image26],
+    brand: "Electronics",
+    title: "Lithium Batteries",
+    info: "Lithium",
+    category: "Battery",
+    type: "Battery",
+    connectivity: "Battery",
+    finalPrice: 250,
+    originalPrice: 300,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 27,
+    tag: "featured-product",
+    images: [Image27],
+    brand: "JBL",
+    title: "JBL Music Speakers",
+    info: "JBL",
+    category: "JBL",
+    type: "JBL",
+    connectivity: "JBL",
+    finalPrice: 3500,
+    originalPrice: 4000,
     rateCount: 4,
     quantity: 1,
   },
