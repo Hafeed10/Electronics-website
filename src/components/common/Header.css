@@ -16,9 +16,6 @@ ul {
     position: relative;
 }
 
-.nav_logo img {
-    height: 50px;
-}
 
 .nav_links {
     display: flex;

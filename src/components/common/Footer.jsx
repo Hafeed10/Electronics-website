@@ -8,15 +8,18 @@ const Footer = () => {
   const form = useRef();
   const [subValue, setSubValue] = useState('');
   const [emailSent, setEmailSent] = useState(false);
+  const [error, setError] = useState('');
 
-  const service_id = "service_i89yxwl";
-  const template_id = "template_yqvqq9e";
-  const public_key = "aYEqkFjQKa1r8-kUu";
+  const service_id = "service_abctus9";
+  const template_id = "template_uhkty3d";
+  const public_key = "j6YahqNZoebTYlmcn";
 
   const currYear = new Date().getFullYear();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setError('');
+    setEmailSent(false);
 
     emailjs
       .sendForm(service_id, template_id, form.current, {
@@ -24,12 +27,13 @@ const Footer = () => {
       })
       .then(
         () => {
-          console.log('SUCCESS!');
           setEmailSent(true);
           setSubValue('');
+          setTimeout(() => setEmailSent(false), 4000);
         },
         (error) => {
-          console.log('FAILED...', error.text);
+          setError('Failed to subscribe. Please try again.');
+          console.error('EmailJS error:', error);
         }
       );
   };
@@ -59,13 +63,19 @@ const Footer = () => {
                   value={subValue}
                   onChange={(e) => setSubValue(e.target.value)}
                 />
-                <button type="submit" className="btn">
+                <button type="submit" value="Send" className="btn">
                   Subscribe
                 </button>
               </form>
+
               {emailSent && (
-                <p className="success-message" style={{ color: 'green', marginTop: '10px' }}>
-                  Thank you for subscribing!
+                <p style={{ color: 'green', marginTop: '10px' }}>
+                  ✅ Thank you for subscribing!
+                </p>
+              )}
+              {error && (
+                <p style={{ color: 'red', marginTop: '10px' }}>
+                  ❌ {error}
                 </p>
               )}
             </div>
@@ -99,17 +109,29 @@ const Footer = () => {
           <div className="sub_footer_wrapper">
             <div className="foot_copyright">
               <p>
-                {currYear} | power saff. All Rights Reserved. Built by |{' '}
+                © {currYear} | power saff. All Rights Reserved. Built by{' '}
                 <a href="https://github.com/Hafeed10/" target="_blank" rel="noopener noreferrer">
                   Muhammed Hafeex
                 </a>
               </p>
             </div>
+
             <div className="foot_social">
               {footSocial.map((item) => {
                 const { id, icon, path } = item;
-                return (
-                  <Link to={path} key={id}>
+                const isExternal = path.startsWith('http');
+                return isExternal ? (
+                  <a
+                    href={path}
+                    key={id}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Social link ${id}`}
+                  >
+                    {icon}
+                  </a>
+                ) : (
+                  <Link to={path} key={id} aria-label={`Social link ${id}`}>
                     {icon}
                   </Link>
                 );
