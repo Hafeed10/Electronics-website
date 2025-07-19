@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import filtersContext from '../../contexts/filters/filtersContext';
 import { sortMenu } from '../../data/filterBarData';
 import { displayMoney } from '../../helpers/utils';
+import'./filter.css';
 
 
 const FilterBarOptions = () => {
@@ -105,11 +106,12 @@ const FilterBarOptions = () => {
                                             checked={checked}
                                             onChange={() => handleBrandsMenu(id)}
                                         />
-                                        <label htmlFor={label}>{label}</label>
+                                        <p  htmlFor={label}>{label}</p>
                                     </li>
                                 );
                             })
                         }
+                        
                     </ul>
                 </div>
 
@@ -129,7 +131,7 @@ const FilterBarOptions = () => {
                                             checked={checked}
                                             onChange={() => handleCategoryMenu(id)}
                                         />
-                                        <label htmlFor={label}>{label}</label>
+                                        <p className='max' htmlFor={label}>{label}</p>
                                     </li>
                                 );
                             })

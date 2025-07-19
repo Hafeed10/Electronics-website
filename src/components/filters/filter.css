@@ -1,0 +1,182 @@
+#filterbar {
+  background: var(--bg-color-2);
+  padding: 1.5rem;
+  max-height: 82vh;
+  overflow-y: auto;
+}
+
+#filterbar::-webkit-scrollbar {
+  width: 0.35vw;
+}
+
+
+.close_btn {
+  display: none;
+  font-size: 2rem;
+  line-height: 0.5;
+  cursor: pointer;
+}
+
+.sort_menu,
+.filter_menu {
+  display: grid;
+  gap: 0.5rem;
+
+  justify-items: start;
+}
+
+.sort_menu li {
+  cursor: pointer;
+  transition: color 0.2s ease;
+   
+  
+}
+
+.sort_menu li.active,
+.sort_menu li:hover {
+  color: var(--main-color-2);
+}
+
+.filter_block:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.filter_block h4 {
+  margin-bottom: 1rem;
+}
+
+.filter_btn {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.filter_btn input,
+.filter_btn p{
+  cursor: pointer;
+    text-align: center;
+}
+
+.filter_btn p{
+  user-select: none;
+}
+
+.price_filter p {
+  font-weight: 200;
+  margin-bottom: 0.5rem;
+}
+.sort_head,
+.filter_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Filterbar-mobile */
+#filterbar_mob {
+  display: none;
+}
+
+.filterbar_wrapper {
+  position: relative;
+  display: grid;
+  gap: 2.5rem;
+  font-size: 0.92rem;
+}
+
+.clear_filter_btn .btn {
+  width: 100%;
+}
+
+
+@media (max-width: 991px) {
+  .clear_filter_btn {
+    margin-top: 1.1rem;
+  }
+  #filterbar {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  .sort_head,
+  .filter_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .close_btn {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 0.5;
+    cursor: pointer;
+  }
+}
+
+
+
+@media (max-width: 991px) {
+  #filterbar_mob {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    background-color: var(--bg-color-2);
+    box-shadow: 0px -8px 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .filterbar_mob_wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.92rem;
+  }
+
+  .filterbar_mob_wrapper .title {
+    cursor: pointer;
+  }
+
+  .filterbar_mob_wrapper .title svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .filterbar_mob_wrapper .title span {
+    vertical-align: middle;
+    margin-left: 8px;
+  }
+
+  .sort_options,
+  .filter_options {
+    display: none;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--bg-color-2);
+  }
+
+  .sort_options.show,
+  .filter_options.show {
+    display: block;
+  }
+
+  .sort_options {
+    bottom: 0;
+  }
+
+  .sort_options .sort_menu {
+    gap: 1rem;
+  }
+
+  .filter_options {
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+}

@@ -78,7 +78,7 @@ const Contact = () => {
                 <textarea name="message" required></textarea>
                 <label>Message:</label>
               </div>
-              <button type="submit" className="submit-btn">Send</button>
+              <button type="submit" className="submit-bt1">Send</button>
 
               {/* Feedback Messages */}
               {emailSent && (
