@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const form = useRef();
@@ -45,16 +46,16 @@ const Contact = () => {
             </div>
             <div className="links">
               <div className="link">
-                <a href="#"><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></a>
+                <Link><img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" /></Link>
               </div>
               <div className="link">
-                <a href="#"><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></a>
+                <Link><img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" /></Link>
               </div>
               <div className="link">
-                <a href="#"><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" /></a>
+                <Link><img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" /></Link>
               </div>
               <div className="link">
-                <a href="#"><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></a>
+                <Link><img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" /></Link>
               </div>
             </div>
           </div>
