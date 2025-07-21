@@ -10,6 +10,7 @@ import Contact from "../components/common/Contact";
 import AdminPage from "../components/common/Admin/AdminPage";
 import Dashboard from "../components/common/Admin/Dashboard";
 import ProtectedRoute from "../components/common/ProtectedRoute";  // import ProtectedRoute
+import ProductList from "../components/common/Admin/ProductList";
 
 const RouterRoutes = () => {
   useScrollRestore();
@@ -21,6 +22,7 @@ const RouterRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/ProductList" element={<ProductList />} />
         <Route 
           path="/dashboard" 
           element={

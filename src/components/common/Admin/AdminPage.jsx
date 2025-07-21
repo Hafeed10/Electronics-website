@@ -9,17 +9,20 @@ function AdminPage() {
 
     const handleLogin = () => {
         if (email === 'powersaff@gmail.com' && password === '12345') {
-            localStorage.setItem('isAuthenticated', 'true'); // save login state
+            localStorage.setItem('isAuthenticated', 'true');
             navigate('/dashboard');
         } else {
             alert('Invalid email or password');
+            setEmail('');
+            setPassword('');
         }
     };
 
     return (
         <div className="admin-container">
             <div className="admin-card">
-                <h2>Login</h2>
+                <h2>Admin Login</h2>
+
                 <div className="form-section">
                     <div className="input-group">
                         <input
@@ -27,19 +30,24 @@ function AdminPage() {
                             placeholder="Enter your email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
                         />
                     </div>
+
                     <div className="input-group">
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder="Enter your password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
+                            onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
                         />
                     </div>
                 </div>
 
-                <button className="admin-button" onClick={handleLogin}>Login</button>
+                <button className="admin-button" onClick={handleLogin}>
+                    Login
+                </button>
             </div>
         </div>
     );
