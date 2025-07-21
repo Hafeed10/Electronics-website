@@ -1,6 +1,7 @@
 // src/ProductList.js
 import React, { useEffect, useState } from 'react';
 import './ProductList.css';
+import { Link } from 'react-router-dom';
 
 function ProductList() {
     const [products, setProducts] = useState([]);
@@ -118,6 +119,7 @@ function ProductList() {
                 )}
             </div>
             <div className='button_section'>
+                <Link to='/dashboard'>Back</Link>
                 <button>Publish</button>
             </div>
         </>
