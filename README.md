@@ -1,6 +1,5 @@
-# ⚡ Power Saff Admin Dashboard
-
-A React-based admin dashboard to manage products, connected with Firebase Firestore for real-time product storage and retrieval.
+# ⚡ Power Saff Website
+A React-based project to manage products, connected with Firebase Firestore for real-time product storage and retrieval.
 
 ---
 
