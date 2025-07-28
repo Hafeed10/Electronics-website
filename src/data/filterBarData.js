@@ -59,7 +59,7 @@ export const brandsMenu = [
   },
   {
     id: 7,
-    label: "Smart Watch",
+    label: "SmartWatch",
     checked: false,
   },
 ];
@@ -102,7 +102,7 @@ export const categoryMenu = [
   },
   {
     id: 7,
-    label: "Smart Watch",
+    label: "SmartWatch",
     checked: false,
   },
 ];

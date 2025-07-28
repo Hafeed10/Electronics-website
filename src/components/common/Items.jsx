@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import './Items.css'; // import the CSS
-import speakerImage from '../../assets/stereo-BbWcF3hI.webp'; // adjust the path if needed
+import './Items.css'; // Make sure the CSS file path is correct
+import speakerImage from '../../assets/stereo-BbWcF3hI.webp'; // Adjust path as needed
 
 const Items = () => {
   const calculateTimeLeft = () => {
-    const difference = +new Date('2025-07-20T00:00:00') - +new Date();
-    let timeLeft = {};
+    const targetDate = new Date('2025-07-20T23:59:59'); // Updated to end of day
+    const now = new Date();
+    const difference = targetDate - now;
+
+    let timeLeft = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: 0,
+    };
 
     if (difference > 0) {
       timeLeft = {
