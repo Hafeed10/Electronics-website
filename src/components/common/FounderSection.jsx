@@ -1,6 +1,6 @@
 import React from 'react';
 import './FounderSection.css';
-import founderImage from '../../assets/photo-DtZpFyrB.png'; // Use the image you uploaded
+import founderImage from '../../assets/images/contact-img.webp'; // Use the image you uploaded
 
 import { FaTruck, FaHeadphonesAlt, FaShieldAlt } from 'react-icons/fa';
 

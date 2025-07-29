@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { IoMdStar } from 'react-icons/io';
 import { Link } from 'react-router-dom';
-import { displayMoney } from '../../helpers/utils';
+// import { displayMoney } from '../../helpers/utils';
 import cartContext from '../../contexts/cart/cartContext';
 import useActive from '../../hooks/useActive';
 
@@ -26,8 +26,8 @@ const ProductCard = (props) => {
         }, 3000);
     };
 
-    const newPrice = displayMoney(finalPrice);
-    const oldPrice = displayMoney(originalPrice);
+    // const newPrice = displayMoney(finalPrice);
+    // const oldPrice = displayMoney(originalPrice);
 
 
     return (
@@ -49,10 +49,9 @@ const ProductCard = (props) => {
                     </h3>
                     <h5 className="products_info">{info}</h5>
                     <div className="separator"></div>
-                    <h2 className="products_price">
-                        {newPrice} &nbsp;
-                        <small><del>{oldPrice}</del></small>
-                    </h2>
+                    <h5 className="products_price">
+                      Pleas Your Product Purchase
+                    </h5>
                     <button
                         type="button"
                         className={`btn products_btn ${activeClass(id)}`}

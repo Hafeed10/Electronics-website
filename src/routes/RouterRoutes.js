@@ -7,10 +7,6 @@ import Home from "../pages/Home";
 import ErrorPage from "../pages/ErrorPage";
 import About from "../components/common/About";
 import Contact from "../components/common/Contact";
-import AdminPage from "../components/common/Admin/AdminPage";
-import Dashboard from "../components/common/Admin/Dashboard";
-import ProtectedRoute from "../components/common/ProtectedRoute";  // import ProtectedRoute
-import ProductList from "../components/common/Admin/ProductList";
 
 const RouterRoutes = () => {
   useScrollRestore();
@@ -21,16 +17,6 @@ const RouterRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<AdminPage />} />
-        <Route path="/ProductList" element={<ProductList />} />
-        <Route 
-          path="/dashboard" 
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          } 
-        />
         <Route path="/cart" element={<Cart />} />
         <Route path="/all-products" element={<AllProducts />} />
         <Route path="*" element={<ErrorPage />} />
