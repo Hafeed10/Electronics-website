@@ -23,10 +23,14 @@ import Image22 from "../assets/images/product6-removebg-preview-DAC2mlE5.png";
 import Image23 from "../assets/images/st1_azyp-v8-removebg-preview.png-DArmXBga.avif";
 import Image24 from "../assets/images/batterycharger-ZTbtfiB9.png";
 import Image25 from "../assets/images/wired-keyboard-BAyjGj3P.webp";
-import Image26 from "../assets/images/image 38.png";
 import Image27 from "../assets/stereo-BbWcF3hI.webp";
 import Image28 from "../assets/images/products/batt-removebg-preview.png";
 import Image29 from "../assets/images/products/camera-removebg-preview.png";
+import Image30 from "../assets/119A2520.png";
+import Image31 from "../assets/119A2523.png";
+import Image32 from "../assets/119A2529.png";
+import Image34 from "../assets/119A2536.png";
+import Image35 from "../assets/119A2545.png";
 
 const productsData = [
   {
@@ -115,8 +119,8 @@ const productsData = [
     id: 5,
     images: [Image6],
     brand: "Battery",
-    title: "AX_ON",
-    info: "Battery",
+    title: "Powersaff Tubular",
+    info: "Powersaff Tubular",
     category: "Battery / Inverter",
     type: "On Ear",
     connectivity: "Battery",
@@ -157,8 +161,8 @@ const productsData = [
     id: 9,
     images: [Image9],
     brand: "Battery",
-    title: "Sayok Tubular",
-    info: "Sayok Tubular",
+    title: "Powersaff Tubular",
+    info: "Powersaff Tubular",
     category: "Battery / Inverter",
     type: "Battery",
     connectivity: "Battery",
@@ -398,20 +402,6 @@ const productsData = [
     quantity: 1,
   },
   {
-    id: 26,
-    images: [Image26],
-    brand: "Electronics",
-    title: "Lithium Batteries",
-    info: "Lithium",
-    category: "Battery / Inverter",
-    type: "Battery",
-    connectivity: "Battery",
-    finalPrice: 250,
-    originalPrice: 300,
-    rateCount: 4,
-    quantity: 1,
-  },
-  {
     id: 27,
     tag: "featured-product",
     images: [Image27],
@@ -426,7 +416,7 @@ const productsData = [
     rateCount: 4,
     quantity: 1,
   },
-   {
+  {
     id: 28,
     images: [Image28],
     brand: "battery",
@@ -440,7 +430,7 @@ const productsData = [
     rateCount: 4,
     quantity: 1,
   },
-   {
+  {
     id: 29,
     images: [Image29],
     brand: "Camera",
@@ -451,6 +441,78 @@ const productsData = [
     connectivity: "Electronics",
     finalPrice: 3500,
     originalPrice: 4000,
+    rateCount: 4,
+    quantity: 1,
+  },
+
+  {
+    id: 30,
+    images: [Image30],
+    brand: "Battery",
+    title: "Delta Forze",
+    info: "Delta Forze",
+    category: "Battery / Inverter",
+    type: "Battery / Inverter",
+    connectivity: "Battery",
+    finalPrice: 23500,
+    originalPrice: 24000,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 31,
+    images: [Image31],
+    brand: "Battery",
+    title: "AX-ON",
+    info: "AX-ON",
+    category: "Battery / Inverter",
+    type: "Battery / Inverter",
+    connectivity: "Battery",
+    finalPrice: 23500,
+    originalPrice: 24000,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 32,
+    images: [Image32],
+    brand: "Battery",
+    title: "AX-ON",
+    info: "AX-ON",
+    category: "Battery / Inverter",
+    type: "Battery / Inverter",
+    connectivity: "Battery",
+    finalPrice: 23500,
+    originalPrice: 24000,
+    rateCount: 4,
+    quantity: 1,
+  },
+
+  {
+    id: 34,
+    images: [Image34],
+    brand: "Battery",
+    title: "XTRA Power",
+    info: "XTRA Power",
+    category: "Battery / Inverter",
+    type: "Battery / Inverter",
+    connectivity: "Battery",
+    finalPrice: 23500,
+    originalPrice: 24000,
+    rateCount: 4,
+    quantity: 1,
+  },
+  {
+    id: 35,
+    images: [Image35],
+    brand: "Battery",
+    title: "XTRA Power",
+    info: "XTRA Power",
+    category: "Battery / Inverter",
+    type: "Battery / Inverter",
+    connectivity: "Battery",
+    finalPrice: 23500,
+    originalPrice: 24000,
     rateCount: 4,
     quantity: 1,
   },

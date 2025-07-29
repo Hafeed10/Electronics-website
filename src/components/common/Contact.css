@@ -53,6 +53,7 @@ body {
 .links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   padding-top: 50px;
 }
@@ -60,17 +61,23 @@ body {
 .link {
   margin: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
-.links img {
+.links a {
   width: 45px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+  color: rgb(30, 144, 159);
+  text-align: center;
   height: 45px;
   filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #0006);
   transition: 0.2s;
   user-select: none;
 }
 
-.links img:hover {
+.links a:hover {
   transform: scale(1.1);
 }
 

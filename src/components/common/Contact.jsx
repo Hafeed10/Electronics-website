@@ -2,6 +2,10 @@ import React, { useRef, useState } from 'react';
 import './Contact.css';
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs';
+import { IntegerSchema } from 'firebase/ai';
+import { FaInstagram } from 'react-icons/fa';
+import { BiLogoGmail } from 'react-icons/bi';
 
 const Contact = () => {
   const form = useRef();
@@ -45,23 +49,23 @@ const Contact = () => {
             </div>
             <div className="links">
               <div className="link">
-                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-                  <img src="https://i.postimg.cc/m2mg2Hjm/linkedin.png" alt="linkedin" />
+                <a href="#" target="_blank" rel="noreferrer">
+                  <BsLinkedin/>
                 </a>
               </div>
               <div className="link">
-                <a href="https://www.github.com" target="_blank" rel="noreferrer">
-                  <img src="https://i.postimg.cc/YCV2QBJg/github.png" alt="github" />
+                <a href="#" target="_blank" rel="noreferrer">
+                  <BsWhatsapp/>
                 </a>
               </div>
               <div className="link">
-                <a href="https://codepen.io" target="_blank" rel="noreferrer">
-                  <img src="https://i.postimg.cc/W4Znvrry/codepen.png" alt="codepen" />
+                <a href="#" target="_blank" rel="noreferrer">
+                  <FaInstagram/>
                 </a>
               </div>
               <div className="link">
                 <a href="mailto:powersaff@gmail.com">
-                  <img src="https://i.postimg.cc/NjLfyjPB/email.png" alt="email" />
+                  <BiLogoGmail/>
                 </a>
               </div>
             </div>

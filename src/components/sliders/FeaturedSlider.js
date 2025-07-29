@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, A11y, Autoplay } from 'swiper';
-import { displayMoney } from '../../helpers/utils';
+// import { displayMoney } from '../../helpers/utils';
 import productsData from '../../data/productsData';
 
 import 'swiper/scss';
@@ -52,8 +52,8 @@ const FeaturedSlider = () => {
             {
                 featuredProducts.map((item) => {
                     const { id, images, title, finalPrice, originalPrice } = item;
-                    const newPrice = displayMoney(finalPrice);
-                    const oldPrice = displayMoney(originalPrice);
+                    // const newPrice = displayMoney(finalPrice);
+                    // const oldPrice = displayMoney(originalPrice);
 
                     return (
                         <SwiperSlide key={id} className="featured_slides">
@@ -64,8 +64,7 @@ const FeaturedSlider = () => {
                                 </Link>
                             </figure>
                             <h2 className="products_price">
-                                {newPrice} &nbsp;
-                                <small><del>{oldPrice}</del></small>
+                                ****
                             </h2>
                         </SwiperSlide>
                     );
