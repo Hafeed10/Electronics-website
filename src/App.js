@@ -6,6 +6,8 @@ import Footer from './components/common/Footer';
 import BackTop from './components/common/BackTop';
 import { FiltersProvider } from './contexts/filters/filtersContext';
 import { Analytics } from "@vercel/analytics/react";
+import OfferPopup from './components/common/OfferPopup';
+import img from '../src/assets/BRIGHT ELECTRONICS & ELECTRICALS SALES & SERVICE (2).png'
 
 
 const App = () => {
@@ -14,6 +16,7 @@ const App = () => {
       <CommonProvider>
         <FiltersProvider>
           <CartProvider>
+             <OfferPopup imageSrc={img} /> {/* Show offer popup */}
             <Header />
             <RouterRoutes />
             <Footer />
